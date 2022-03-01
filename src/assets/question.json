@@ -1,0 +1,213 @@
+{
+    "question": [
+        {
+            "questionText": "Which of the following statement is correct for AngularJS?",
+            "option": [
+                {
+                    "text": "AngularJS is an HTML framework"
+                },
+                {
+                    "text": "AngularJS is a Java framework"
+                },
+                {
+                    "text": "AngularJS is a JavaScript framework",
+                    "correct": true
+                },
+                {
+                    "text": "AngularJS is a SQL framework"
+                }
+            ],
+            "explanation":"AngularJS is a JavaScript framework."
+        },
+        {
+            "questionText": "On which of the Architectural pattern AngularJS is based?",
+            "option": [
+                {
+                    "text": "Observer Pattern"
+                },
+                {
+                    "text": "Decorator pattern"
+                },
+                {
+                    "text": "MVC Architecture pattern"
+                },
+                {
+                    "text": "MVVM Architectural pattern",
+                    "correct":true
+                }
+            ],
+            "explanation":"AngularJS is based on MVVM Architectural pattern."
+        },
+        {
+            "questionText": " AngularJS is perfect for?",
+            "option": [
+                {
+                    "text": "SPAs",
+                    "correct":true
+                },
+                {
+                    "text": "MPAs"
+                },
+                {
+                    "text": "DPAs"
+                },
+                {
+                    "text": "CPAs"
+                }
+            ],
+            "explanation":" AngularJS is perfect for Single Page Applications (SPAs)."
+        },
+        {
+            "questionText": "Which of the following is the correct syntax for writing AngularJS expressions?",
+            "option": [
+                {
+                    "text": "(expression)"
+                },
+                {
+                    "text": "{{expression}}",
+                    "correct":true
+                },
+                {
+                    "text": "{{{expression}}}"
+                },
+                {
+                    "text": "[expression]"
+                }
+            ],
+            "explanation":"The correct syntax for writing AngularJS expressions is: {{expression}}"
+        },
+        {
+            "questionText": "Which of the following directive is used to bind the application data to the HTML view in AngularJS?",
+            "option": [
+                {
+                    "text": "ng-app directive"
+                },
+                {
+                    "text": "ng-model directive",
+                    "correct":true
+                },
+                {
+                    "text": "ng-bind directive"
+                },
+                {
+                    "text": "ng-init directive"
+                }
+            ],
+            "explanation":"The ng-bind directive is used to bind the application data to the HTML view in the AngularJS application."
+        },
+        {
+            "questionText": "Which of the following syntax is correct for applying multiple filters in AngularJS?",
+            "option": [
+                {
+                    "text": "{{ expression | filter1 | filter2 | ... }}"
+                },
+                {
+                    "text": "{{ expression | {filter1} | {filter2} | ... }}"
+                },
+                {
+                    "text": "{{ expression - {filter1} - {filter2} - ... }}",
+                    "correct":true
+                },
+                {
+                    "text": "{{ {filter1} | {filter2} | ...-expression}}"
+                }
+            ],
+            "explanation":"The syntax of applying multiple filters in AngularJS can be written as: {{ expression | filter1 | filter2 | ... }}"
+        },
+        {
+            "questionText": "Which of the following statement is true about the lowercase filter?",
+            "option": [
+                {
+                    "text": "The lowercase filter converts a text to lower case text.",
+                    "correct":true
+                },
+                {
+                    "text": "The lowercase filter is a function that takes text as input."
+                },
+                {
+                    "text": "Both of the above."
+                },
+                {
+                    "text": "None of the above."
+                }
+            ],
+            "explanation":"The lowercase filter converts a text to lower case text. That's why it is added to the AngularJS expression to filter out the result."
+        },
+        {
+            "questionText": "Which of the following is an advantage of AngularJS?",
+            "option": [
+                {
+                    "text": "AngularJS code is unit testable."
+                },
+                {
+                    "text": "AngularJS provides reusable components."
+                },
+                {
+                    "text": "AngularJS uses dependency injection and makes use of separation of concerns."
+                },
+                {
+                    "text": "All of the above",
+                    "correct":true
+                }
+            ],
+            "explanation":"All of the above are the advantages of AngularJS."
+        },
+        {
+            "questionText": " Which of the following statement is true about $dirty flag?",
+            "option": [
+                {
+                    "text": "$dirty flag is used to state that value has been changed.",
+                    "correct":true
+                },
+                {
+                    "text": "$dirty flag is used to state that the form has invalid data."
+                },
+                {
+                    "text": "Both of the above."
+                },
+                {
+                    "text": "None of the above."
+                }
+            ],
+            "explanation":"The $dirty flag is used to state that value in the form has been changed."
+        },
+        {
+            "questionText": "What is the use of Angular Controllers in the application?",
+            "option": [
+                {
+                    "text": "Angular controllers are used for controlling the data.",
+                    "correct":true
+                },
+                {
+                    "text": "Angular controllers are used for displaying the data."
+                },
+                {
+                    "text": "Both of the above are correct."
+                },
+                {
+                    "text": "None of the above is correct."
+                }
+            ],
+            "explanation":"Angular controllers are used to control the data."
+        },
+        {
+            "questionText": "Which of the following is used to share data between controller and view in AngularJS?",
+            "option": [
+                {
+                    "text": "using Model"
+                },
+                {
+                    "text": "using services",
+                    "correct":true
+                },
+                {
+                    "text": "using factory"
+                },
+                {
+                    "text": "using $scope"
+                }
+            ],
+            "explanation":"using services is the correct answer."
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+.card{
+    margin: 10px;
+    padding: 10px;
+    background-color: #0ca678;
+    border: 2px solid #183153;
+    color: #183153;
+    font-weight: bold;
+    /* max-width: 70%px; */
+}
+.logo{
+    font-size: 60px;
+    padding: 0px 0 0 20px;
+    /* width: 100px; */
+    color: #183153;
+}
+li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+li .card{
+    background-color: #183153;
+    color: #fff;
+    padding: 5px;
+    border: 2px solid #fff;
+}
+li .card:hover{
+    color: #0ca678;
+}
+ol{
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    color: #183153;
+    font-size: 40px;
+    cursor: pointer;
+    /* border: 5px solid #183153; */
+    /* padding: 10px 20px; */
+}
