@@ -11,40 +11,54 @@
                     {{email}}</span>
             </div>
         </div>
-        <div class="d-flex justify-content-around py-3">
-            <div class="point">
-                <h5>{{points}} points</h5>
+        <ng-container  *ngIf="!isQuizCompleted">
+            <div class="d-flex justify-content-around py-3">
+                <div class="point">
+                    <h5>{{points}} points</h5>
+                </div>
+                <div class="ques-no">
+                    <span style="font-style:italic">Question {{currentQuestion+1}} of {{questionList.length}}</span>
+                </div>
+                <div class="time">
+                    {{counter}} sec 🕐
+                </div>
             </div>
-            <div class="ques-no">
-                <span style="font-style:italic">Question {{currentQuestion+1}} of 11</span>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%; background-color: #183153;" [ngStyle]="{'width': progress+'%'}" 
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <div class="time">
-                {{counter}} sec 🕐
+            <div class="question">
+                <div class="card">
+                    <h4>{{questionList[currentQuestion]?.questionText}}</h4>
+                </div>
             </div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 25%; background-color: #183153;" [ngStyle]="{'width': progress+'%'}" 
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <div class="question">
-            <div class="card">
-                <h4>{{questionList[currentQuestion]?.questionText}}</h4>
+            <div class="option">
+                <ol *ngFor="let option of questionList[currentQuestion]?.option">
+                    <li (click)="answer(currentQuestion, option)">
+                        <div appChangeBg [isCorrect]="option.correct" class="card">
+                            {{option.text}}
+                        </div>
+                    </li>
+                </ol>
             </div>
-        </div>
-        <div class="option">
-            <ol *ngFor="let option of questionList[currentQuestion]?.option">
-                <li (click)="answer(currentQuestion, option)">
-                    <div appChangeBg [isCorrect]="option.correct" class="card">
-                        {{option.text}}
-                    </div>
-                </li>
-            </ol>
-        </div>
-        <div class="d-flex justify-content-between">
-            <button [disabled]="currentQuestion===0" class="btn" (click)="previousQuestion()"><i
-                    class="fa fa-chevron-left" aria-hidden="true"></i></button>
-            <button class="btn" (click)="resetQuestion()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
-            <button class="btn" (click)="nextQuestion()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-        </div>
+            <div class="d-flex justify-content-between">
+                <button [disabled]="currentQuestion===0" class="btn" (click)="previousQuestion()"><i
+                        class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                <button class="btn" (click)="resetQuestion()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                <button class="btn" (click)="nextQuestion()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="isQuizCompleted">
+            <div class="row d-flex justify-content-between">
+                    <img style="width: 20%;" class="img-fluid col-sm-14 mx-auto" src="../../../assets/celebration.png" alt="celebrateImage">
+                <div class="result col-md-6 col-sm-12">
+                    <h3>Congratulations!!! <br> You have Completed This Quiz <br>Below is Your Result:</h3>
+                    <p>Total Questions You have Attemped: {{questionList.length}}</p>
+                    <p>Total Correct Answer: {{correctAnswer}}</p>
+                    <p>Total Incorrect Answer: {{inCorrectAnswer}}</p>
+                    <p>Your Score: {{points}} Points</p>
+                </div>
+            </div>
+        </ng-container>
     </div>
 </div>
