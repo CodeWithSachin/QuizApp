@@ -1,19 +1,17 @@
 <div class="container">
     <h4 class="text">Registration Form</h4>
-    <div class="input">
-        <i class="fas fa-user-astronaut"></i>
-        <input type="text" name="name" id="" placeholder="Enter Your Name">
-    </div>
+    <img src="https://th.bing.com/th/id/R.8e2c571ff125b3531705198a15d3103c?rik=gzhbzBpXBa%2bxMA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-big-image-png-2240.png&ehk=VeWsrun%2fvDy5QDv2Z6Xm8XnIMXyeaz2fhR3AgxlvxAc%3d&risl=&pid=ImgRaw&r=0" alt="Profile-pic">
+    
     <div class="input">
         <i class="fas far fa-envelope"></i>
-        <input type="email" name="name" id="" placeholder="Enter Your E-mail">
+        <input type="email" name="email" id="" class="form-module" [(ngModel)]="email" placeholder="Enter Your E-mail">
     </div>
     <div class="input">
         <i class="fa fas fa-user-lock"></i>
-        <input type="password" name="name" id="" placeholder="Enter Your Password">
+        <input type="password" name="password" id="" class="form-module" [(ngModel)]="password" placeholder="Enter Your Password">
     </div>
     <div >
-        <button class="submit" routerLink="/login">Register User</button><br>
+        <button class="submit" (click)="register()">Register User</button><br>
         <a routerLink="/login" class="for_pass">Already Have Account! Login Now.</a>
     </div>
 </div>
