@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
-import { QuestionService } from 'src/app/service/question.service';
+import { QuestionService } from 'src/app/Shared/question.service';
 
 @Component({
   selector: 'app-question',
@@ -10,7 +10,6 @@ import { QuestionService } from 'src/app/service/question.service';
 export class QuestionComponent implements OnInit {
 
   public name : string="";
-  public email : string="";
   public questionList : any = [];
   public currentQuestion : number = 0;
   public points:number = 0;
@@ -24,7 +23,6 @@ export class QuestionComponent implements OnInit {
 
   ngOnInit(): void {
     this.name = localStorage.getItem("name")!;
-    this.email = localStorage.getItem("email")!;
     this.getAllQuestion();
     this.startCounter();
   }
@@ -77,7 +75,14 @@ export class QuestionComponent implements OnInit {
       if(this.counter===0){
         this.currentQuestion++;
         this.counter=60;
+        // this.counter--;
+        this.startCounter();
         this.points-=10;
+        this.inCorrectAnswer++;
+      }
+      if(this.currentQuestion===this.questionList.length){
+        this.isQuizCompleted=true;
+        this.stopCounter();
       }
     });
     setTimeout(()=>{
