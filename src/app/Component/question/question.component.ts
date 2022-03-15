@@ -113,5 +113,7 @@ export class QuestionComponent implements OnInit {
     this.isQuizCompleted=false;
     this.currentQuestion=0;
     this.points=0;
+    this.counter=60;
+    this.startCounter();
   }
 }
