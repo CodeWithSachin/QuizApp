@@ -111,6 +111,7 @@ export class QuestionComponent implements OnInit {
   }
   retry(){
     this.isQuizCompleted=false;
-    this.currentQuestion=0
+    this.currentQuestion=0;
+    this.points=0;
   }
 }
