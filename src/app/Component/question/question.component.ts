@@ -109,4 +109,8 @@ export class QuestionComponent implements OnInit {
     this.progress = ((this.currentQuestion/this.questionList.length)*100).toString();
     return this.progress;
   }
+  retry(){
+    this.isQuizCompleted=false;
+    this.currentQuestion=0
+  }
 }
